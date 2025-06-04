@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { about } from "../../pages/about";
-import { home } from "../../pages/home";
+import  about  from "../../pages/about";
+import  home  from "../../pages/home";
+
 export default function Header() {
   return (
     <header className="bg-blue-600 text-white p-4">
