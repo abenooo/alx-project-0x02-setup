@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from '../components/common/Card';
 import PostModal from '../components/common/PostModal';
 import { PostData } from '../interfaces';
-
+import Header from '@/components/layout/Header';
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [posts, setPosts] = useState<PostData[]>([]);
@@ -13,6 +13,7 @@ const HomePage = () => {
 
   return (
     <div className="container mx-auto p-4">
+            <Header />
       <h1 className="text-3xl font-bold mb-8">Card Component Demo</h1>
       
       <button
