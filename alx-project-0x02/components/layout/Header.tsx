@@ -1,15 +1,28 @@
-import Link from "next/link";
-import  about  from "@/pages/about";
-import  home  from "@/pages/home";
-import posts from "@/pages/posts";
+import Link from 'next/link';
 
-export default function Header() {
+const Header = () => {
   return (
-    <header className="bg-blue-600 text-white p-4">
-      <h1 className="text-2xl font-bold">ALX Project</h1>
-      <Link href="/about">About</Link>
-      <Link href="/home">Home</Link>
-      <Link href="/posts">Post</Link>
+    <header className="bg-blue-600 text-white shadow-md">
+      <div className="container mx-auto px-4 py-3">
+        <nav className="flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold">
+            ALX Project
+          </Link>
+          <div className="flex space-x-6">
+            <Link href="/home" className="hover:underline hover:text-blue-200">
+              Home
+            </Link>
+            <Link href="/about" className="hover:underline hover:text-blue-200">
+              About
+            </Link>
+            <Link href="/posts" className="hover:underline hover:text-blue-200">
+              Posts
+            </Link>
+          </div>
+        </nav>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
