@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@/components/common/Button';
+import Button from '../components/common/Button';
 
 const AboutPage = () => {
   return (
@@ -33,26 +33,6 @@ const AboutPage = () => {
             </Button>
             <Button shape="rounded-full" className="bg-purple-600 text-white hover:bg-purple-700">
               Fully Rounded
-            </Button>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold mb-4">Combination Examples</h2>
-          <div className="flex items-center space-x-4">
-            <Button 
-              size="large" 
-              shape="rounded-full" 
-              className="bg-red-500 text-white hover:bg-red-600"
-            >
-              Big Round Button
-            </Button>
-            <Button 
-              size="small" 
-              shape="rounded-sm" 
-              className="bg-gray-200 hover:bg-gray-300"
-            >
-              Small Square
             </Button>
           </div>
         </section>
