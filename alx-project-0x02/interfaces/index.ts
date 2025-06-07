@@ -23,3 +23,9 @@ export interface PostProps {
   body: string;
   userId: string;
 }
+export interface UserProps {
+  id: number,
+  name: string,
+  email: string,
+  address: string,
+}
