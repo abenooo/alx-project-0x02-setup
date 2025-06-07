@@ -18,6 +18,9 @@ const Header = () => {
             <Link href="/posts" className="hover:underline hover:text-blue-200">
               Posts
             </Link>
+            <Link href="/users" className="hover:underline hover:text-blue-200">
+              Users
+            </Link>
           </div>
         </nav>
       </div>
