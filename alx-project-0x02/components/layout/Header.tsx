@@ -1,6 +1,7 @@
 import Link from "next/link";
-import  about  from "../../pages/about";
-import  home  from "../../pages/home";
+import  about  from "@/pages/about";
+import  home  from "@/pages/home";
+import posts from "@/pages/posts";
 
 export default function Header() {
   return (
