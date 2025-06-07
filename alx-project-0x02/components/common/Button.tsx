@@ -1,39 +1,45 @@
 import React from 'react';
-import { ButtonProps } from '../../interfaces';
+
+interface ButtonProps {
+  children: React.ReactNode;
+  size?: 'small' | 'medium' | 'large';
+  shape?: 'rounded-sm' | 'rounded-md' | 'rounded-lg' | 'rounded-full';
+  className?: string;
+  onClick?: () => void;
+}
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  onClick,
   size = 'medium',
   shape = 'rounded-md',
   className = '',
-  type = 'button',
-  ...props
+  onClick,
 }) => {
-  // Size classes mapping
   const sizeClasses = {
     small: 'py-1 px-3 text-sm',
     medium: 'py-2 px-4 text-base',
     large: 'py-3 px-6 text-lg',
   };
 
-  // Shape classes mapping
   const shapeClasses = {
     'rounded-sm': 'rounded-sm',
     'rounded-md': 'rounded-md',
     'rounded-lg': 'rounded-lg',
-    'rounded-full': 'rounded-full'
+    'rounded-full': 'rounded-full',
   };
-
-  // Base button classes
-  const baseClasses = 'font-medium transition-colors duration-200 focus:outline-none';
 
   return (
     <button
-      type={type}
       onClick={onClick}
-      className={`${baseClasses} ${sizeClasses[size]} ${shapeClasses[shape]} ${className}`}
-      {...props}
+      className={`
+        font-medium
+        transition-colors
+        duration-200
+        focus:outline-none
+        ${sizeClasses[size]}
+        ${shapeClasses[shape]}
+        ${className}
+      `}
     >
       {children}
     </button>
