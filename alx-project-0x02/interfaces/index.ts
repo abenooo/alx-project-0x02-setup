@@ -8,3 +8,8 @@ export interface CardProps {
   content: string;
   className?: string; // Optional for additional styling
 }
+export interface PostData {
+  id: number;
+  title: string;
+  content: string;
+}
